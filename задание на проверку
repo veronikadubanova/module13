@@ -1,1 +1,19 @@
-
+count = int(input("Введите количество билетов:"))
+total_sum = 0
+price = 0
+for price in range (1, count + 1):
+    age = int(input("Введите возраст посетителей:"))
+    if 18 <= age <= 25:
+        price = 990
+    elif 0 <= age <= 18:
+        price = 0
+    elif 25 <= age <= 99:
+        price = 1390
+    else:
+        print("Возраст введен некорректно")
+if count > 3:
+    total_sum = (price + ((total_sum * count)*0.9))
+    print("Общая стоимость билетов:",total_sum)
+else:
+    total_sum = (price + (total_sum * count))
+    print("Общая стоимость билетов:",total_sum
